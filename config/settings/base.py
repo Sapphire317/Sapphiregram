@@ -66,12 +66,15 @@ THIRD_PARTY_APPS = [
     'crispy_forms',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
-    'rest_framework',
+    'allauth.socialaccount', # registration
+    'rest_framework', # REST framework
+    'taggit', # Tags for the photos.
 ]
 LOCAL_APPS = [
     'sapphiregram.users.apps.UsersAppConfig',
+    'sapphiregram.images.apps.ImagesConfig',
     # Your stuff: custom apps go here
+    'sapphiregram.notifications.apps.NotificationsConfig' #notifications app
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -238,3 +241,5 @@ SOCIALACCOUNT_ADAPTER = 'sapphiregram.users.adapters.SocialAccountAdapter'
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+TAGGIT_CASE_INSENSITIVE = True

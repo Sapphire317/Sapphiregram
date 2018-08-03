@@ -19,6 +19,15 @@ urlpatterns = [
         "users/",
         include("sapphiregram.users.urls", namespace="users"),
     ),
+    path(
+        "images/",
+        include("sapphiregram.images.urls", namespace="images"),
+    ),
+    path(
+        "notifications/",
+        include("sapphiregram.notifications.urls", namespace="notifications"),
+    ),
+    
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
 ] + static(
